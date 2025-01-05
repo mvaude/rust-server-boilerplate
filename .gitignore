@@ -1,6 +1,6 @@
 .aider*
 # Rust specific
-/target/
+target/
 **/*.rs.bk
 Cargo.lock
 
@@ -31,3 +31,9 @@ Thumbs.db
 
 # Backup files
 *~
+
+venv/
+
+.env
+
+.aider*
