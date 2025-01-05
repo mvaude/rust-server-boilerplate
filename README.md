@@ -1,6 +1,6 @@
 # Rust Server Boilerplate
 
-[![CI](https://github.com/yourusername/rust-server-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/rust-server-boilerplate/actions/workflows/ci.yml)
+[![CI](https://github.com/mvaude/rust-server-boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/mvaude/rust-server-boilerplate/actions/workflows/ci.yml)
 
 A minimalist, production-ready Rust HTTP server boilerplate using Axum framework with built-in health checks and modern development tooling.
 
