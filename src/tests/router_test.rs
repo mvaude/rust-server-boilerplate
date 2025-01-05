@@ -10,7 +10,8 @@ use crate::router;
 #[tokio::test]
 async fn test_router_creation() {
     let app = router::app();
-    assert!(app.is_instance::<Router>());
+    // The fact that this compiles proves it's a Router
+    let _: Router = app;
 }
 
 #[tokio::test]
