@@ -1,10 +1,10 @@
 use super::health_check;
+use crate::router::app;
 use axum::{
     body::Body,
     http::{Request, StatusCode},
 };
 use tower::ServiceExt;
-use crate::router::app;
 
 #[tokio::test]
 async fn test_health_check_function() {
@@ -27,7 +27,7 @@ async fn test_health_check_endpoint() {
         .unwrap();
 
     assert_eq!(response.status(), StatusCode::OK);
-    
+
     let body = response.into_body();
     let bytes = axum::body::to_bytes(body, usize::MAX).await.unwrap();
     assert_eq!(&bytes[..], b"OK");

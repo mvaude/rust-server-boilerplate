@@ -1,5 +1,5 @@
-use std::env;
 use super::get_port;
+use std::env;
 
 #[test]
 fn test_port_configuration() {

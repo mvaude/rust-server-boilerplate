@@ -1,7 +1,9 @@
 /// Returns a simple "OK" response to indicate the service is running
-/// 
+///
+///
 /// # Examples
-/// 
+///
+///
 /// ```
 /// # use rust_server_boilerplate::handlers;
 /// # tokio_test::block_on(async {
