@@ -5,13 +5,9 @@
 //! 
 //! # Examples
 //! 
-//! ```no_run
-//! use crate::{app, run};
-//! 
-//! fn main() {
-//!     let app = app();
-//!     run(app);
-//! }
+//! ```
+//! # use rust_server_boilerplate::app;
+//! let app = app();
 //! ```
 
 use axum::{Router, routing::get};
@@ -24,8 +20,7 @@ pub mod handlers;
 /// # Examples
 /// 
 /// ```
-/// use rust_server_boilerplate::app;
-/// 
+/// # use rust_server_boilerplate::app;
 /// let router = app();
 /// ```
 pub fn app() -> Router {
