@@ -6,7 +6,7 @@
 //! # Examples
 //! 
 //! ```no_run
-//! use rust_server_boilerplate::{app, run};
+//! use crate::{app, run};
 //! 
 //! fn main() {
 //!     let app = app();

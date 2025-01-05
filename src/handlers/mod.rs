@@ -3,7 +3,7 @@
 /// # Examples
 /// 
 /// ```
-/// use rust_server_boilerplate::handlers;
+/// use crate::handlers;
 /// 
 /// # tokio_test::block_on(async {
 /// let response = handlers::health_check().await;
