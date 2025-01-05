@@ -7,7 +7,13 @@ use tower::ServiceExt;
 use crate::router::app;
 
 #[tokio::test]
-async fn test_health_check() {
+async fn test_health_check_function() {
+    let response = health_check().await;
+    assert_eq!(response, "OK");
+}
+
+#[tokio::test]
+async fn test_health_check_endpoint() {
     let app = app();
 
     let response = app
