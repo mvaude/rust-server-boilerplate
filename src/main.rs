@@ -1,4 +1,4 @@
-use crate::{app, run};
+use rust_server_boilerplate::{app, run};
 
 fn main() {
     let app = app();
