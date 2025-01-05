@@ -6,7 +6,7 @@
 use axum::Router;
 use std::net::SocketAddr;
 use std::env;
-use dotenv::dotenv;
+use dotenvy::dotenv;
 
 pub mod handlers;
 pub mod router;
