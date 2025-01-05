@@ -30,5 +30,5 @@ async fn test_health_check_endpoint() {
     
     let body = response.into_body();
     let bytes = axum::body::to_bytes(body, usize::MAX).await.unwrap();
-    assert_eq!(&body[..], b"OK");
+    assert_eq!(&bytes[..], b"OK");
 }
