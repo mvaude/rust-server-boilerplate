@@ -31,10 +31,8 @@ pub fn run(router: Router) {
         let addr = SocketAddr::from(([127, 0, 0, 1], port));
         println!("Server running on {}", addr);
         
-        axum::Server::bind(&addr)
-            .serve(router.into_make_service())
-            .await
-            .unwrap();
+        let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
+        axum::serve(listener, router).await.unwrap();
     });
 }
 
