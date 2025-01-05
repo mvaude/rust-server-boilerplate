@@ -5,7 +5,7 @@ use axum::{
 };
 use tower::ServiceExt;
 
-use crate::app;
+use crate::router::app;
 
 #[tokio::test]
 async fn test_health_check() {

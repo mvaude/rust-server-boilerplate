@@ -2,31 +2,15 @@
 //! 
 //! This crate provides a simple HTTP server implementation using Axum
 //! with a health check endpoint at `/health`.
-//! 
-//! # Examples
-//! 
-//! ```
-//! # use rust_server_boilerplate::app;
-//! let app = app();
-//! ```
 
-use axum::{Router, routing::get};
+use axum::Router;
 use std::net::SocketAddr;
 
 pub mod handlers;
+pub mod router;
 
-/// Creates and returns the application router with configured routes
-/// 
-/// # Examples
-/// 
-/// ```
-/// # use rust_server_boilerplate::app;
-/// let router = app();
-/// ```
-pub fn app() -> Router {
-    Router::new()
-        .route("/health", get(handlers::health_check))
-}
+// Re-export app function for convenience
+pub use router::app;
 
 pub fn run(router: Router) {
     let rt = tokio::runtime::Runtime::new().unwrap();
